@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="AButenko" constructor="PCFCustomHandler" version="0.0.1" display-name-key="PCFCustomHandler" description-key="PCFCustomHandler description" control-type="standard">
+    <property name="Field" display-name-key="Field" description-key="Shows the field that the control is mapped to." of-type="SingleLine.Text" usage="bound" required="true" />
+    <property name="WebResource" display-name-key="JS File" description-key="JS File that contains the code you want to run" of-type="SingleLine.Text" usage="input" required="true" />
+    <property name="MethodName" display-name-key="Method Name" description-key="Name of the function you want to run on click of the button" of-type="SingleLine.Text" usage="input" required="true" />
+    <property name="ButtonLabel" display-name-key="Button Label" description-key="The label of the button" of-type="SingleLine.Text" usage="input" required="true" />
+    <resources>
+      <code path="index.ts" order="1"/>
+    </resources>
+    <feature-usage>
+      <uses-feature name="Device.captureAudio" required="true" />
+      <uses-feature name="Device.captureImage" required="true" />
+      <uses-feature name="Device.captureVideo" required="true" />
+      <uses-feature name="Device.getBarcodeValue" required="true" />
+      <uses-feature name="Device.getCurrentPosition" required="true" />
+      <uses-feature name="Device.pickFile" required="true" />
+      <uses-feature name="Utility" required="true" />
+      <uses-feature name="WebAPI" required="true" />
+    </feature-usage>
+  </control>
+</manifest>
